@@ -1,3 +1,11 @@
+//
+//  LandmarkAnnotation.swift
+//  Atlas
+//
+//  Created by Adison  on 04/08/26.
+//
+
+
 import MapKit
 
 final class LandmarkAnnotation: NSObject, MKAnnotation {

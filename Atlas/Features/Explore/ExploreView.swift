@@ -1,6 +1,15 @@
+//
+//  ExploreView.swift
+//  Atlas
+//
+//  Created by Adison  on 04/08/26.
+//
+
+
 import SwiftUI
 
 struct ExploreView: View {
+    @EnvironmentObject var authService: AuthService
     @StateObject private var viewModel = ExploreViewModel()
 
     var body: some View {
@@ -22,18 +31,27 @@ struct ExploreView: View {
             }
             .padding(.top, 8)
         }
-        .sheet(item: $viewModel.mapState.selectedLandmark) { landmark in
-            LandmarkDetailView(landmark: landmark)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
+        .sheet(isPresented: Binding(
+            get: { viewModel.mapState.selectedLandmark != nil },
+            set: { isPresented in
+                if !isPresented { viewModel.mapState.clearSelection() }
+            }
+        )) {
+            if let landmark = viewModel.mapState.selectedLandmark {
+                LandmarkDetailView(landmark: landmark, authService: authService)
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
+            }
         }
         .task { await viewModel.loadLandmarks() }
     }
 
     private var searchBar: some View {
         HStack {
-            Image(systemName: "magnifyingglass").foregroundStyle(AtlasTheme.textSecondary)
-            Text("Search landmarks").foregroundStyle(AtlasTheme.textSecondary)
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(AtlasTheme.textSecondary)
+            Text("Search landmarks")
+                .foregroundStyle(AtlasTheme.textSecondary)
             Spacer()
         }
         .padding(12)
@@ -64,5 +82,3 @@ struct ExploreView: View {
         }
     }
 }
-
-extension Landmark: Identifiable {}

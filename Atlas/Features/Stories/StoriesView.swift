@@ -1,3 +1,11 @@
+//
+//  StoriesView.swift
+//  Atlas
+//
+//  Created by Adison  on 04/08/26.
+//
+
+
 import SwiftUI
 
 struct StoriesView: View {

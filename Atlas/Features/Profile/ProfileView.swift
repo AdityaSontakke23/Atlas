@@ -1,3 +1,11 @@
+//
+//  ProfileView.swift
+//  Atlas
+//
+//  Created by Adison  on 04/08/26.
+//
+
+
 import SwiftUI
 
 struct ProfileView: View {

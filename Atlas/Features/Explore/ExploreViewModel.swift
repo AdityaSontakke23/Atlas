@@ -1,3 +1,11 @@
+//
+//  ExploreViewModel.swift
+//  Atlas
+//
+//  Created by Adison  on 04/08/26.
+//
+
+
 import Foundation
 import MapKit
 import Combine

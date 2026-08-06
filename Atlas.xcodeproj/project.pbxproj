@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B34F7F1B30188FF900F5B9FE /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B34F7F1A30188FF900F5B9FE /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B3F81FF83017855600D9A9A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		B3F820013017855600D9A9A9 /* AtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B34F7F22301891F300F5B9FE /* Exceptions for "Atlas" folder in "Atlas" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B3F81FE93017855500D9A9A9 /* Atlas */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B3F81FEC3017855500D9A9A9 /* Atlas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B34F7F22301891F300F5B9FE /* Exceptions for "Atlas" folder in "Atlas" target */,
+			);
 			path = Atlas;
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34F7F1B30188FF900F5B9FE /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +130,7 @@
 			);
 			name = Atlas;
 			packageProductDependencies = (
+				B34F7F1A30188FF900F5B9FE /* Supabase */,
 			);
 			productName = Atlas;
 			productReference = B3F81FEA3017855500D9A9A9 /* Atlas.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = B3F81FE13017855500D9A9A9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B34F7F1930188FF900F5B9FE /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3F81FEB3017855500D9A9A9 /* Products */;
 			projectDirPath = "";
@@ -397,6 +419,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Atlas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Atlas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +594,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B34F7F1930188FF900F5B9FE /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B34F7F1A30188FF900F5B9FE /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B34F7F1930188FF900F5B9FE /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3F81FE23017855500D9A9A9 /* Project object */;
 }
