@@ -15,7 +15,7 @@
 - Category: Travel, Reference (Primary: Travel)
 - Keywords: historical exploration, maps, time travel, South Mumbai, heritage, landmarks, stories, culture, education
 - Description: 
-  Atlas is a location-intelligence platform that helps users explore places through contextual lenses. The first lens, TimeLens, lets users interactively explore the historical evolution of South Mumbai via map overlays, timelines, archival photographs, curated stories, and lightweight community interaction. Discover how a place changed over time with era-based tile overlays, view historical photographs, read curated narratives, and engage with other explorers in realtime.
+  Atlas is a location-intelligence platform that helps users explore places through contextual lenses. The first lens, TimeLens, lets users interactively explore the historical evolution of South Mumbai via map overlays, timelines, archival photographs, curated stories, and lightweight community interaction. Discover how a place changed over time with era-based tile overlays and smooth morph transitions, view historical photographs, read curated narratives, earn achievements and streaks for exploration, and engage with other explorers in realtime.
 - Promotional Text: Explore places through time
 - Support URL: https://github.com/AdityaSontakke23/Atlas (or project website)
 - Marketing URL: https://github.com/AdityaSontakke23/Atlas
@@ -24,13 +24,14 @@
 
 ## Screenshots & App Preview
 Required screenshots (1242x2688 or 1125x2436 for iPhone 16.5.5):
-1. Home Screen – hero card, featured carousel, era collections.
-2. Explore Screen – map with opacity control, era selector, landmark bottom sheet.
-3. Landmark Detail Sheet – hero image, timeline scrubber, then/n toggle, photo carousel, comments.
-4. Stories Screen – editorial cards, tap to view story.
+1. Home Screen – hero card, featured carousel, era collections, glassmorphism panels.
+2. Explore Screen – map with opacity control, era selector, landmark bottom sheet, map morph slider.
+3. Landmark Detail Sheet – hero image, timeline scrubber, then/n toggle, photo carousel, comments, glassmorphism surfaces.
+4. Stories Screen – editorial cards, tap to view story, glassmorphism cards.
 5. Community Screen – saved places grid, recent comments, live rooms.
-6. Profile Screen – avatar, profile info, saved landmarks, sign out.
-App preview video (15-30 seconds) showcasing era switching, comment live update, and map exploration.
+6. Profile Screen – avatar, profile info, saved landmarks, sign out, achievement badges, streak counter.
+7. Gameification Screen – achievement gallery, streak calendar, reward history, level progression.
+App preview video (15-30 seconds) showcasing era switching with map morph, comment live update, achievement unlocking, and map exploration.
 
 ## Build Settings
 - Version: 1.0.0
@@ -47,6 +48,7 @@ App preview video (15-30 seconds) showcasing era switching, comment live update,
 - Enable Background Modes: Location (if using background location, not in MVP), Audio (not used), Background fetch (optional for caching).
 - Enable Push Notifications capability (if using APNs for realtime, but using Supabase Realtime via websockets, not required).
 - Privacy: Location set to "While Using the App" (if optional location search, not core); otherwise "None".
+- Note: Glassmorphism effects use SwiftUI's built-in blur and transparency; no additional frameworks required.
 
 ## Submission Process
 1. Increment version and build number.
@@ -62,7 +64,8 @@ App preview video (15-30 seconds) showcasing era switching, comment live update,
 ## Post-Release Tasks
 - Monitor crash logs via Xcode Organizer or third-party (Firebase Crashlytics if added).
 - Gather user feedback via App Store reviews, surveys, or social media.
-- Track engagement metrics: DAU/WAU, feature usage (map interactions, comment posts, saves).
+- Track engagement metrics: DAU/WAU, feature usage (map interactions, comment posts, saves, achievement unlocks, streak maintenance).
+- Monitor historical API usage and response times for supplemental data.
 - Plan content updates: add more landmarks, eras, stories based on user interest.
 - Plan for future lenses: ArchitectureLens, CultureLens, EnvironmentLens (separate updates).
 - Respond to App Store reviews promptly.

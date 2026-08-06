@@ -2,8 +2,9 @@
 
 ## Theme
 - Base: Dark, museum-like neutral theme (background: #121212, surface: #1E1E1E)
+- Glassmorphism UI: semi-transparent frosted surfaces with background blur and subtle borders
 - Elegant highlights for interactive elements (accent: #BB86FC, secondary: #03DAC6)
-- Frosted or translucent control surfaces over map (background with 60% opacity, backdrop blur)
+- Gameified accent colors for rewards/achievements (success: #4CAF50, warning: #FF9800, celebration: #FFD700)
 - Light mode variant for accessibility (optional)
 
 ## Typography
@@ -29,6 +30,12 @@
 - Success: #4CAF50 (Green)
 - Warning: #FF9800 (Orange)
 - Error: #F44336 (Red)
+- Celebration: #FFD700 (Gold)
+
+### Glassmorphism
+- Glass surface: rgba(255,255,255,0.08) with backdrop blur
+- Glass border: 1px solid rgba(255,255,255,0.18)
+- Glass shadow: 0 4px 6px rgba(0,0,0,0.1)
 
 ### Interactive States
 - Pressed overlay: 20% darker
@@ -46,11 +53,12 @@
 
 ## Components
 ### Hero Cards
+- Glassmorphism surface: rgba(255,255,255,0.08) with backdrop blur and 1px border rgba(255,255,255,0.18)
 - Image overlay with gradient overlay (transparent to black 40%)
 - Title: Serif, 1.5rem, white
 - Subtitle: Sans-serif, 1rem, opacity 80%
 - Padding: 16px
-- Border radius: 12px
+- Border radius: 16px
 
 ### Carousels
 - Horizontal scrolling with momentum
@@ -62,11 +70,12 @@
 - Height: 32px
 - Padding horizontal: 12px
 - Border radius: 16px
-- Background: surface variant
+- Background: glassmorphism surface (rgba(255,255,255,0.08), backdrop blur)
 - Active background: primary
 - Active text: on primary (white)
 - Font: sans-serif medium, 0.9rem
 - Margin: 4px vertical
+- Border: 1px solid rgba(255,255,255,0.18)
 
 ### Opacity Sliders
 - Track height: 4px
@@ -79,9 +88,10 @@
 - Height: 24px
 - Padding horizontal: 8px
 - Border radius: 12px
-- Background: surface variant with 60% opacity
+- Background: glassmorphism surface (rgba(255,255,255,0.08), backdrop blur)
 - Text: sans-serif, 0.8rem
 - Margin: 4px
+- Border: 1px solid rgba(255,255,255,0.18)
 
 ### Bottom Sheets
 - Handle bar: 4px width, 36px length, surface variant, radius 2px
@@ -135,6 +145,13 @@
 - Border: 2px solid surface variant
 - Placeholder: serif initials, background surface variant, rounded
 
+### Gameification Elements
+- Achievement Badge: circular badge with icon, glassmorphism surface, colored border based on rarity
+- Streak Counter: flame icon with number, pulsating animation on milestones
+- Reward Popup: confetti animation, glassmorphism card with celebratory colors
+- Progress Bar: segmented track with glassmorphism fill, celebratory animation on completion
+- Level Display: serif typography with underline animation on level up
+
 ### Profile Editing Forms
 - Input fields: height 44px, padding horizontal 12px, background surface variant, border 1px solid surface variant, radius 8px
 - Label: serif, 0.85rem, margin bottom 4px
@@ -149,6 +166,11 @@
 - Feedback for interactive states: pressed scale 0.95, focus ring as above
 - Smooth map transitions when switching eras: crossfade overlays 300ms, map camera animate 400ms
 - Haptic feedback: light impact for taps, medium for confirmation, error for failures
+- Gameification animations:
+  - Achievement unlock: scale pop 0.8->1.2->1.0 with confetti burst
+  - Streak flame: pulse animation 1.1x scale on milestones
+  - Level up: text shake + underline reveal + particle burst
+  - Reward celebration: confetti cannon + glassmorphism card pop-in
 
 ## Accessibility
 - Support for text scaling up to 200% without loss of content or functionality
@@ -163,5 +185,6 @@
 - Use SwiftUI's built-in Dynamic Type with custom fonts via UIFontMetrics
 - Implement theme via EnvironmentObject or ObservableObject
 - Utilize SF Symbols for icons where appropriate, with custom SVGs for brand-specific icons
+- Implement glassmorphism using background blur (BlurView) and semi-transparent surfaces
 - Leverage MapKit snapshot testing for map UI tests
 - Centralize color and spacing constants in a Theme struct

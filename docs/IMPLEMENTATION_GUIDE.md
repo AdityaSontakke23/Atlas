@@ -15,7 +15,9 @@
 3. Optimize tile request performance
 4. Seed initial South Mumbai dataset
 5. Implement era-based collections on Home screen
-6. Complete story detail view and map integration
+6. Implement map morph/dial visualization (slider to crossfade between eras with visual terrain morph)
+7. Integrate free historical APIs (Wikidata, Wikipedia, Europeana, OpenStreetMap historical layers) for supplemental context
+8. Complete story detail view and map integration
 
 ## Phase 3: Social & Polish (Weeks 5-6)
 1. Implement saved places view in Community

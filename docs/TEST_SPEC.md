@@ -10,6 +10,9 @@
 - Model decoding/encoding (Codable conformance, default values)
 - Persistence layer (UserDefaults settings, if any)
 - Utility functions (date formatting, distance calculations)
+- Gameification logic (achievement unlocking, streak tracking, reward distribution, level progression)
+- Historical API integration (Wikidata, Wikipedia, Europeana API calls and response parsing)
+- Map morph visualization (crossfade animation timing, terrain morph calculations)
 
 ## Integration Testing
 - Login and session restore flow (deep link handling, persistence)
@@ -22,6 +25,9 @@
 - Deep link handling (auth callback, routing to appropriate screen)
 - Story detail navigation (tap story, view landmarks, map integration)
 - Saved places flow (bookmark persistence, retrieval, deletion)
+- Gameification flow (achievement earning, streak tracking, reward claiming, level progression)
+- Historical API integration flow (fetch supplemental data, display in landmark detail, attribution)
+- Map morph visualization (era slider interaction, crossfade animation, visual terrain morph)
 
 ## Manual Testing
 - Era switching with overlay transitions (smooth crossfade, correct tile set)
@@ -35,6 +41,9 @@
 - Edge cases (empty states, malformed data, network failure)
 - Localization (if future added, ensure strings externalized)
 - Push notifications (if implemented, permission and handling)
+- Glassmorphism UI (translucent surfaces, blur effect, border visibility)
+- Gameification features (achievement unlocking, streak counters, reward popups, level progression)
+- Map morph visualization (era slider crossfade, visual terrain morph, attribution display)
 
 ## Automated Testing Infrastructure
 - Unit tests using XCTest, run on every PR
@@ -54,4 +63,7 @@
 All tests must pass on CI before merge.
 Manual test checklist signed off by QA lead.
 Performance benchmarks: map tile load < 200ms, app launch < 2s, memory < 150MB.
+Glassmorphism UI render time < 16ms per frame (60fps).
 Accessibility audit passes WCAG AA for critical screens.
+Gameification system: achievement unlock < 500ms, streak update < 200ms.
+Historical API response time < 1s for supplemental data.

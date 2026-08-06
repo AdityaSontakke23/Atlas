@@ -64,10 +64,11 @@ Contains:
 - Sign out
 
 ## Design Language
-- Dark, museum-like neutral theme with elegant highlights.
-- Serif headline font for editorial modules and clean sans-serif for controls.
-- Frosted or translucent control surfaces over the map.
-- Micro-animations for era changes and sheet expansion.
+- Glassmorphism UI: blurred, semi-transparent panels with vibrant accents over map.
+- Dark museum-like neutral theme with elegant highlights and colorful gameified accents.
+- Serif headline font for editorial modules; clean sans-serif for controls.
+- Interactive map morph: smooth crossfade between eras with visual terrain morph.
+- Micro-animations for era changes, sheet expansion, and reward celebrations.
 - Distinct visual hierarchy between stories, map controls, and social features.
 
 ## UI Implementation Status (from Implementation Specs)

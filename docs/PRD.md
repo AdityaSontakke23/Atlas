@@ -34,6 +34,7 @@ Atlas is not only a map. It is a place-understanding platform. Navigation apps a
 - 12 to 20 curated landmarks.
 - Landmark map discovery.
 - Historical tile overlays for selected eras.
+- Interactive map morph/dial to visualize historical changes (slider to fade between eras).
 - Timelines and era selection.
 - Historical photographs and captions.
 - Curated stories.
@@ -41,6 +42,7 @@ Atlas is not only a map. It is a place-understanding platform. Navigation apps a
 - Saved places.
 - Realtime presence in landmark rooms.
 - Realtime comments and quick reactions.
+- Gameified UI: achievements, streaks, rewards for exploring landmarks and eras.
 
 ### Out of Scope
 - Full city reconstruction.
@@ -82,6 +84,7 @@ Content curation is handled manually through Supabase tables, SQL scripts, CSV i
 - Modular codebase.
 - Fast first-load for non-map screens.
 - Accessibility support for text scaling and VoiceOver labels where possible.
+- Use free historical APIs (Wikidata, Wikipedia, Europeana, OpenStreetMap historical layers, etc.) for supplemental historical context.
 
 ## Success Criteria for MVP
 1. Users can authenticate and persist sessions.

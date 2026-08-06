@@ -1,0 +1,37 @@
+# Xcode
+DerivedData/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+/*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+*.xcscheme
+*.xcworkspacedata
+.xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.checkstate
+*.location
+*.plist
+# CocoaPods
+Pods/
+# Carthage
+Carthage/Build/
+# SwiftPM
+.package/
+# Build
+build/
+# Logs
+*.log
+# Temporary files
+*.tmp
+*.temp
+# Environment
+.env
+.env.*
+# Secrets
+SupabaseSecrets.swift
+# SwiftLint
+.swiftlint.yml
+# DSLanguage
+*.doccarchive
